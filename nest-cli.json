@@ -31,6 +31,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/my-app/tsconfig.app.json"
       }
+    },
+    "all-provider": {
+      "type": "application",
+      "root": "apps/all-provider",
+      "entryFile": "main",
+      "sourceRoot": "apps/all-provider/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/all-provider/tsconfig.app.json"
+      }
     }
   }
 }
