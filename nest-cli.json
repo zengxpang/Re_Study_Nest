@@ -40,6 +40,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/all-provider/tsconfig.app.json"
       }
+    },
+    "all-decorator": {
+      "type": "application",
+      "root": "apps/all-decorator",
+      "entryFile": "main",
+      "sourceRoot": "apps/all-decorator/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/all-decorator/tsconfig.app.json"
+      }
     }
   }
 }
