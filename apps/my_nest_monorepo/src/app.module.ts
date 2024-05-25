@@ -7,6 +7,8 @@ import { CycleAModule } from './cycle-a/cycle-a.module';
 import { CycleBModule } from './cycle-b/cycle-b.module';
 import { TheDynamicModule } from './the-dynamic/the-dynamic.module';
 import { TheDynamic2Module } from './the-dynamic2/the-dynamic2.module';
+import { LifeCycle1Module } from './life-cycle1/life-cycle1.module';
+import { LifeCycle2Module } from './life-cycle2/life-cycle2.module';
 
 @Module({
   imports: [
@@ -32,6 +34,8 @@ import { TheDynamic2Module } from './the-dynamic2/the-dynamic2.module';
         };
       },
     }),
+    LifeCycle1Module,
+    LifeCycle2Module,
   ],
   controllers: [AppController],
   providers: [AppService],
