@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/qs@6.10.2/dist/qs.js"></script>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <input id="fileInput" type="file" multiple />
+    <script>
+      async function runParam() {
+        try {
+          const res = await axios.get('/base-req/id=123');
+          console.log(res);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      runParam();
+
+      async function runQuery() {
+        try {
+          const res = await axios.get('/base-req/run-query', {
+            params: {
+              name: '光',
+              age: 20,
+            },
+          });
+          console.log(res);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      runQuery();
+
+      async function runPost1() {
+        try {
+          const res = await axios.post(
+            '/base-req/run-post',
+            Qs.stringify({
+              name: '光',
+              age: 20,
+            }),
+            {
+              headers: { 'content-type': 'application/x-www-form-urlencoded' },
+            },
+          );
+          console.log(res);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+      runPost1();
+
+      async function runPostJson() {
+        try {
+          const res = await axios.post('/base-req/run-post', {
+            name: '光',
+            age: 20,
+          });
+          console.log(res);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+      runPostJson();
+
+      const fileInput = document.getElementById('fileInput');
+      async function runFile() {
+        try {
+          const data = new FormData();
+          data.append('name', '光');
+          data.append('age', 20);
+          data.append('file1', fileInput.files[0]);
+          data.append('file2', fileInput.files[1]);
+
+          const res = await axios.post('/base-req/run-file', data, {
+            headers: { 'content-type': 'multipart/form-data' },
+          });
+          console.log(res);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      fileInput.onchange = runFile;
+    </script>
+  </body>
+</html>
