@@ -49,6 +49,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/all-decorator/tsconfig.app.json"
       }
+    },
+    "context": {
+      "type": "application",
+      "root": "apps/context",
+      "entryFile": "main",
+      "sourceRoot": "apps/context/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/context/tsconfig.app.json"
+      }
     }
   }
 }
