@@ -23,6 +23,8 @@ import { AllDecoratorService } from './all-decorator.service';
 import { AFilter } from './a/a.filter';
 import { AGuard } from './a/a.guard';
 import { NextFunction, Request, Response } from 'express';
+import { CustomA } from './custom-a/custom-a.decorator';
+import { CustomC } from './custom-b/custom-b.decorator';
 
 // @Controller({
 //   host: ':host.0.0.1',
@@ -110,5 +112,11 @@ export class AllDecoratorController {
       name: 'zxp',
       age: 25,
     };
+  }
+
+  @Get('custom-a')
+  @CustomA('a', 'b')
+  getCustomA(@CustomC('zxp') c): string {
+    return c;
   }
 }

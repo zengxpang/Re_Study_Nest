@@ -23,8 +23,9 @@ export class AGuard implements CanActivate {
       'roles',
       context.getHandler(),
     );
-    console.log('classMetadata', classMetadata);
-    console.log('methodMetadata', methodMetadata);
+    console.log(this.reflector.get<string[]>('custom-a', context.getHandler()));
+    // console.log('classMetadata', classMetadata);
+    // console.log('methodMetadata', methodMetadata);
     return true;
   }
 }
