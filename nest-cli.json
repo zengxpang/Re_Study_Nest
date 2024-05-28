@@ -94,6 +94,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/all-exception/tsconfig.app.json"
       }
+    },
+    "multiple-version": {
+      "type": "application",
+      "root": "apps/multiple-version",
+      "entryFile": "main",
+      "sourceRoot": "apps/multiple-version/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/multiple-version/tsconfig.app.json"
+      }
     }
   }
 }
