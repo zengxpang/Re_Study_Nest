@@ -85,6 +85,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/all-interceptor/tsconfig.app.json"
       }
+    },
+    "all-exception": {
+      "type": "application",
+      "root": "apps/all-exception",
+      "entryFile": "main",
+      "sourceRoot": "apps/all-exception/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/all-exception/tsconfig.app.json"
+      }
     }
   }
 }
