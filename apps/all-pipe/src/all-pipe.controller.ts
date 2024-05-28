@@ -1,4 +1,5 @@
 import {
+  Body,
   Controller,
   DefaultValuePipe,
   Get,
@@ -11,10 +12,14 @@ import {
   ParseFloatPipe,
   ParseIntPipe,
   ParseUUIDPipe,
+  Post,
   Query,
+  ValidationPipe,
 } from '@nestjs/common';
 import { AllPipeService } from './all-pipe.service';
 import { APipe } from './a/a.pipe';
+import { GDto } from './dto/g.dto';
+import { HDto } from './dto/h.Dto';
 
 enum Ccc {
   AA = '11',
@@ -94,5 +99,17 @@ export class AllPipeController {
   @Get('f/:f2')
   getF(@Query('f1', APipe) f1: string, @Param('f2', APipe) f2: number) {
     return f1 + f2;
+  }
+
+  @Post('g')
+  getG(@Body() obj: GDto) {
+    console.log(obj);
+    return JSON.stringify(obj);
+  }
+
+  @Post('h')
+  getH(@Body() obj: HDto) {
+    console.log(obj);
+    return JSON.stringify(obj);
   }
 }
