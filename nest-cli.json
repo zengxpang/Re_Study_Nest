@@ -76,6 +76,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/all-pipe/tsconfig.app.json"
       }
+    },
+    "all-interceptor": {
+      "type": "application",
+      "root": "apps/all-interceptor",
+      "entryFile": "main",
+      "sourceRoot": "apps/all-interceptor/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/all-interceptor/tsconfig.app.json"
+      }
     }
   }
 }
