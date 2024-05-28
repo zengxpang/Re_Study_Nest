@@ -67,6 +67,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/what-middleware/tsconfig.app.json"
       }
+    },
+    "all-pipe": {
+      "type": "application",
+      "root": "apps/all-pipe",
+      "entryFile": "main",
+      "sourceRoot": "apps/all-pipe/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/all-pipe/tsconfig.app.json"
+      }
     }
   }
 }
