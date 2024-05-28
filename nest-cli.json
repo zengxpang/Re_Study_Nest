@@ -58,6 +58,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/context/tsconfig.app.json"
       }
+    },
+    "what-middleware": {
+      "type": "application",
+      "root": "apps/what-middleware",
+      "entryFile": "main",
+      "sourceRoot": "apps/what-middleware/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/what-middleware/tsconfig.app.json"
+      }
     }
   }
 }
