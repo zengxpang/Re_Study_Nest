@@ -103,6 +103,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/multiple-version/tsconfig.app.json"
       }
+    },
+    "multer-upload": {
+      "type": "application",
+      "root": "apps/multer-upload",
+      "entryFile": "main",
+      "sourceRoot": "apps/multer-upload/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/multer-upload/tsconfig.app.json"
+      }
     }
   }
 }
