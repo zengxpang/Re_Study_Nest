@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://unpkg.com/axios@0.24.0/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <input id="fileInput" type="file" multiple />
+    <script>
+      const fileInput = document.getElementById('fileInput');
+
+      const chunkSize = 1024 * 1024; // 1MB
+
+      fileInput.addEventListener('change', async (event) => {
+        const files = event.target.files;
+
+        const file = files[0];
+        console.log('file', file);
+
+        const chunks = [];
+        let startPos = 0;
+        while (startPos < file.size) {
+          chunks.push(file.slice(startPos, startPos + chunkSize));
+          startPos += chunkSize;
+        }
+
+        const randomStr = Math.random().toString().slice(2, 8);
+
+        const tasks = [];
+
+        chunks.map((chunk, index) => {
+          const formData = new FormData();
+          formData.set('name', `${randomStr}_${file.name}-${index}`);
+          formData.append('files', chunk);
+
+          tasks.push(
+            axios.post('http://localhost:3000/chunkUploads', formData),
+          );
+        });
+
+        await Promise.all(tasks);
+        axios.get('http://localhost:3000/mergeChunks', {
+          params: {
+            name: `${randomStr}_${file.name}`,
+          },
+        });
+
+        // const formData = new FormData();
+        //
+        // formData.append('name', 'zxp');
+        // formData.append('age', 20);
+        //
+        // for (let i = 0; i < files.length; i++) {
+        //   formData.append('files', files[i]);
+        // }
+        //
+        // fetch('http://localhost:3000/uploads', {
+        //   method: 'POST',
+        //   body: formData,
+        // })
+        //   .then((response) => response.json())
+        //   .then((result) => {
+        //     console.log('Success:', result);
+        //   })
+        //   .catch((error) => {
+        //     console.error('Error:', error);
+        //   });
+      });
+    </script>
+  </body>
+</html>
