@@ -112,6 +112,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/multer-upload/tsconfig.app.json"
       }
+    },
+    "the-logger": {
+      "type": "application",
+      "root": "apps/the-logger",
+      "entryFile": "main",
+      "sourceRoot": "apps/the-logger/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/the-logger/tsconfig.app.json"
+      }
     }
   }
 }
