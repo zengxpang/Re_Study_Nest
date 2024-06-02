@@ -121,6 +121,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/the-logger/tsconfig.app.json"
       }
+    },
+    "my-redis": {
+      "type": "application",
+      "root": "apps/my-redis",
+      "entryFile": "main",
+      "sourceRoot": "apps/my-redis/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/my-redis/tsconfig.app.json"
+      }
     }
   }
 }
