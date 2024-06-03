@@ -139,6 +139,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/my-prisma/tsconfig.app.json"
       }
+    },
+    "e-median": {
+      "type": "application",
+      "root": "apps/e-median",
+      "entryFile": "main",
+      "sourceRoot": "apps/e-median/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/e-median/tsconfig.app.json"
+      }
     }
   }
 }

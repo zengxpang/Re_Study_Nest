@@ -1,0 +1,46 @@
+import { Inject, Injectable } from '@nestjs/common';
+import { PrismaService } from 'nestjs-prisma';
+
+import { CreateArticleDto } from './dto/create-article.dto';
+import { UpdateArticleDto } from './dto/update-article.dto';
+
+@Injectable()
+export class ArticlesService {
+  @Inject(PrismaService)
+  private readonly prismaService: PrismaService;
+
+  create(createArticleDto: CreateArticleDto) {
+    return this.prismaService.article.create({ data: createArticleDto });
+  }
+
+  findAll() {
+    return this.prismaService.article.findMany({
+      where: { published: true },
+    });
+  }
+
+  findDrafts() {
+    return this.prismaService.article.findMany({
+      where: { published: false },
+    });
+  }
+
+  findOne(id: number) {
+    return this.prismaService.article.findUnique({
+      where: { id },
+    });
+  }
+
+  update(id: number, updateArticleDto: UpdateArticleDto) {
+    return this.prismaService.article.update({
+      where: { id },
+      data: updateArticleDto,
+    });
+  }
+
+  remove(id: number) {
+    return this.prismaService.article.delete({
+      where: { id },
+    });
+  }
+}
