@@ -130,6 +130,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/my-redis/tsconfig.app.json"
       }
+    },
+    "my-prisma": {
+      "type": "application",
+      "root": "apps/my-prisma",
+      "entryFile": "main",
+      "sourceRoot": "apps/my-prisma/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/my-prisma/tsconfig.app.json"
+      }
     }
   }
 }
