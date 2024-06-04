@@ -157,6 +157,15 @@
       "compilerOptions": {
         "tsConfigPath": "libs/lib1/tsconfig.lib.json"
       }
+    },
+    "session-and-jwt": {
+      "type": "application",
+      "root": "apps/session-and-jwt",
+      "entryFile": "main",
+      "sourceRoot": "apps/session-and-jwt/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/session-and-jwt/tsconfig.app.json"
+      }
     }
   }
 }
