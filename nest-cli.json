@@ -175,6 +175,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/dto-vo/tsconfig.app.json"
       }
+    },
+    "class-validator-decorators": {
+      "type": "application",
+      "root": "apps/class-validator-decorators",
+      "entryFile": "main",
+      "sourceRoot": "apps/class-validator-decorators/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/class-validator-decorators/tsconfig.app.json"
+      }
     }
   }
 }
