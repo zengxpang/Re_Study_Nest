@@ -166,6 +166,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/session-and-jwt/tsconfig.app.json"
       }
+    },
+    "dto-vo": {
+      "type": "application",
+      "root": "apps/dto-vo",
+      "entryFile": "main",
+      "sourceRoot": "apps/dto-vo/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/dto-vo/tsconfig.app.json"
+      }
     }
   }
 }
