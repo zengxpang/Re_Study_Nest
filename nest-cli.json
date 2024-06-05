@@ -200,6 +200,15 @@
           }
         ]
       }
+    },
+    "e-city-weather": {
+      "type": "application",
+      "root": "apps/e-city-weather",
+      "entryFile": "main",
+      "sourceRoot": "apps/e-city-weather/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/e-city-weather/tsconfig.app.json"
+      }
     }
   }
 }
