@@ -209,6 +209,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/e-city-weather/tsconfig.app.json"
       }
+    },
+    "my-pass-port": {
+      "type": "application",
+      "root": "apps/my-pass-port",
+      "entryFile": "main",
+      "sourceRoot": "apps/my-pass-port/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/my-pass-port/tsconfig.app.json"
+      }
     }
   }
 }
