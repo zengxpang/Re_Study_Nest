@@ -184,6 +184,22 @@
       "compilerOptions": {
         "tsConfigPath": "apps/class-validator-decorators/tsconfig.app.json"
       }
+    },
+    "my-i18n": {
+      "type": "application",
+      "root": "apps/my-i18n",
+      "entryFile": "main",
+      "sourceRoot": "apps/my-i18n/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/my-i18n/tsconfig.app.json",
+        "assets": [
+          {
+            "include": "i18n/**/*",
+            "watchAssets": true,
+            "outDir": "dist/apps/my-i18n"
+          }
+        ]
+      }
     }
   }
 }
