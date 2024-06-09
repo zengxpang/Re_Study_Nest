@@ -14,14 +14,17 @@ export class GithubLoginController {
 
   @Get('login')
   @UseGuards(AuthGuard('github'))
-  async login(): Promise<string> {
-    return 'success';
-  }
+  async login() {}
 
   @Get('callback')
   @UseGuards(AuthGuard('github'))
   async callback(@Req() req): Promise<any> {
     console.log(req.user);
-    return this.githubLoginService.findUserByGithubId(req.user.id);
+    const user = await this.githubLoginService.findUserByGithubId(req.user.id);
+    if (!user) {
+      return this.githubLoginService.registerUserByGithubInfo(req.user);
+    } else {
+      return user;
+    }
   }
 }

@@ -18,13 +18,7 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./apps/my_nest_monorepo/test/jest-e2e.json",
-    "migrate:dev": "npx prisma migrate dev",
-    "migrate:dev:create": "npx prisma migrate dev --create-only",
-    "migrate:deploy": "npx prisma migrate deploy",
-    "prisma:generate": "npx prisma generate",
-    "prisma:studio": "npx prisma studio",
-    "prisma:seed": "npx prisma db seed"
+    "test:e2e": "jest --config ./apps/my_nest_monorepo/test/jest-e2e.json"
   },
   "dependencies": {
     "@nestjs/axios": "^3.0.2",
@@ -48,7 +42,6 @@
     "express-session": "^1.18.0",
     "hbs": "^4.2.0",
     "nestjs-i18n": "^10.4.5",
-    "nestjs-prisma": "^0.23.0",
     "passport": "^0.7.0",
     "passport-github2": "^0.1.12",
     "passport-google-oauth20": "^2.0.0",
@@ -112,8 +105,5 @@
     "moduleNameMapper": {
       "^@app/lib1(|/.*)$": "<rootDir>/libs/lib1/src/$1"
     }
-  },
-  "prisma": {
-    "seed": "ts-node prisma/seed.ts"
   }
 }
