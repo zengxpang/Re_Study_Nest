@@ -227,6 +227,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/github-login/tsconfig.app.json"
       }
+    },
+    "google-login": {
+      "type": "application",
+      "root": "apps/google-login",
+      "entryFile": "main",
+      "sourceRoot": "apps/google-login/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/google-login/tsconfig.app.json"
+      }
     }
   }
 }
