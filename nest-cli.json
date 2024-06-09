@@ -218,6 +218,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/my-pass-port/tsconfig.app.json"
       }
+    },
+    "github-login": {
+      "type": "application",
+      "root": "apps/github-login",
+      "entryFile": "main",
+      "sourceRoot": "apps/github-login/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/github-login/tsconfig.app.json"
+      }
     }
   }
 }
