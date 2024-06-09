@@ -236,6 +236,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/google-login/tsconfig.app.json"
       }
+    },
+    "my-config": {
+      "type": "application",
+      "root": "apps/my-config",
+      "entryFile": "main",
+      "sourceRoot": "apps/my-config/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/my-config/tsconfig.app.json"
+      }
     }
   }
 }
