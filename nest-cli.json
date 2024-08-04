@@ -254,6 +254,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/websocket/tsconfig.app.json"
       }
+    },
+    "group-chat-room": {
+      "type": "application",
+      "root": "apps/group-chat-room",
+      "entryFile": "main",
+      "sourceRoot": "apps/group-chat-room/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/group-chat-room/tsconfig.app.json"
+      }
     }
   }
 }
