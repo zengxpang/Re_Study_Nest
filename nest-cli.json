@@ -272,6 +272,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/graphql-crud/tsconfig.app.json"
       }
+    },
+    "graphql-todolist": {
+      "type": "application",
+      "root": "apps/graphql-todolist",
+      "entryFile": "main",
+      "sourceRoot": "apps/graphql-todolist/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/graphql-todolist/tsconfig.app.json"
+      }
     }
   }
 }
