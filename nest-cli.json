@@ -263,6 +263,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/group-chat-room/tsconfig.app.json"
       }
+    },
+    "graphql-crud": {
+      "type": "application",
+      "root": "apps/graphql-crud",
+      "entryFile": "main",
+      "sourceRoot": "apps/graphql-crud/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/graphql-crud/tsconfig.app.json"
+      }
     }
   }
 }
