@@ -281,6 +281,33 @@
       "compilerOptions": {
         "tsConfigPath": "apps/graphql-todolist/tsconfig.app.json"
       }
+    },
+    "microservice-main": {
+      "type": "application",
+      "root": "apps/microservice-main",
+      "entryFile": "main",
+      "sourceRoot": "apps/microservice-main/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/microservice-main/tsconfig.app.json"
+      }
+    },
+    "microservice-user": {
+      "type": "application",
+      "root": "apps/microservice-user",
+      "entryFile": "main",
+      "sourceRoot": "apps/microservice-user/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/microservice-user/tsconfig.app.json"
+      }
+    },
+    "my-etcd": {
+      "type": "application",
+      "root": "apps/my-etcd",
+      "entryFile": "main",
+      "sourceRoot": "apps/my-etcd/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/my-etcd/tsconfig.app.json"
+      }
     }
   }
 }
